@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85d52b2b-c271-441f-8f9b-5aabeb8cde29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/audioSampleTransformation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/noiseV4.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4noiseV1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/4noiseV1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example3.py" beforeDir="false" afterPath="$PROJECT_DIR$/example3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noiseV4.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/noiseV4.mp3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/jisuanji/python/audioMentations",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/jisuanji/python/audioMentations&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\jisuanji\python\audioMentations" />
@@ -57,7 +57,7 @@
       <recent name="D:\jisuanji\python\audioMentations\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.example2">
+  <component name="RunManager" selected="Python.example4">
     <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="audioSampleTransformation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,15 +103,16 @@
       <method v="2" />
     </configuration>
     <configuration name="example3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="audioMentations" />
+      <module name="audioSampleTransformation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\79355\Desktop\audioSampleTransformation\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.8 (audioSampleTransformation)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example3.py" />
@@ -124,15 +125,16 @@
       <method v="2" />
     </configuration>
     <configuration name="example4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="audioMentations" />
+      <module name="audioSampleTransformation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\79355\Desktop\audioSampleTransformation\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.8 (audioSampleTransformation)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example4.py" />
@@ -167,10 +169,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.example2" />
-        <item itemvalue="Python.example" />
         <item itemvalue="Python.example4" />
         <item itemvalue="Python.example3" />
+        <item itemvalue="Python.example2" />
+        <item itemvalue="Python.example" />
       </list>
     </recent_temporary>
   </component>

@@ -2,7 +2,7 @@ import librosa
 import numpy as np
 import soundfile as sf
 
-# shitf  平移
+# shift  平移
 from audiomentations import Shift, Compose
 from numpy.testing import assert_almost_equal
 

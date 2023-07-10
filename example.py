@@ -128,7 +128,7 @@ import soundfile as sf
 #             samples_out_without_transform, samples_out_with_transform
 #         )
 
-
+# 加噪音
 def main():
     from audiomentations import AddBackgroundNoise, PolarityInversion
     # method1  只使用正弦波信号
