@@ -56,3 +56,15 @@ from audiomentations import Compose
 ## SDASCS.py
 
 在这段代码中，我们使用`SpecChannelShuffle`函数来模拟音频信号在多个通道之间的混洗，然后将原始的梅尔频谱图以及混洗后的梅尔频谱图进行可视化。
+
+## ST.py
+
+在这段代码中，我们首先导入需要的模块和音频信号，然后使用 `librosa.effects.trim` 函数进行修剪。我们使用了两种不同的 `top_db` 参数值：默认的60dB和10dB。然后，我们生成原始的梅尔频谱图以及修剪后的梅尔频谱图，最后将原始的梅尔频谱图和修剪后的梅尔频谱图进行可视化。
+
+## SP.py
+
+该代码进行了以下三种音频处理：
+
+1. **音高移位**：这是通过 `librosa.effects.pitch_shift` 函数实现的。它会改变音频信号的音高，但不会改变其速度。在这段代码中，音高被降低了6个半音。
+2. **时间拉伸**：这是通过 `librosa.effects.time_stretch` 函数实现的。它会改变音频信号的播放速度，但不会改变其音高。在这段代码中，音频播放速度被减慢到了原来的75%。
+3. **增益调整**：这是通过 `audiomentations.Compose` 和 `audiomentations.Gain` 实现的。它会改变音频信号的音量。在这段代码中，音量被随机增益在-20dB到0dB之间。
