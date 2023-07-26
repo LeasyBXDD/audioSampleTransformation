@@ -68,3 +68,6 @@ from audiomentations import Compose
 1. **音高移位**：这是通过 `librosa.effects.pitch_shift` 函数实现的。它会改变音频信号的音高，但不会改变其速度。在这段代码中，音高被降低了6个半音。
 2. **时间拉伸**：这是通过 `librosa.effects.time_stretch` 函数实现的。它会改变音频信号的播放速度，但不会改变其音高。在这段代码中，音频播放速度被减慢到了原来的75%。
 3. **增益调整**：这是通过 `audiomentations.Compose` 和 `audiomentations.Gain` 实现的。它会改变音频信号的音量。在这段代码中，音量被随机增益在-20dB到0dB之间。
+
+## high.py
+
