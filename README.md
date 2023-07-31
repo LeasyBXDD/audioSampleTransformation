@@ -85,3 +85,66 @@ from audiomentations import Compose
 8. 最后，使用 SDAfunc 模块中的 SDA_view 函数显示原始音频和增广后的音频的梅尔频谱图。
 
 这是一个对音频数据进行增广和频谱图生成的常见流程，可以用于音频分析、音频分类、语音识别等音频处理的任务中。
+
+## main.py
+
+```python
+from func.apply_audio_effects import apply_audio_effects
+from func.audio_augmentation import audio_augmentation
+from func.channel_shuffle_augmentation import channel_shuffle_augmentation
+from func.SDAfunc import SDA_view
+from func.spec_augmentation import spec_augmentation
+from func.trim import trim
+import numpy as np
+from librosa import load, amplitude_to_db
+from librosa.feature import melspectrogram
+import soundfile as sf
+from audiomentations import Compose, AddGaussianNoise
+
+if __name__ == '__main__':
+    # 使用librosa库加载音频文件，并返回音频信号和采样率
+    signal, sr = load("./content/data/wav48/p225/p225_001.wav")
+
+    # 生成梅尔频谱图
+    S = melspectrogram(y=signal, sr=sr, n_mels=128, fmax=8000)
+
+    # 将梅尔频谱图转换为分贝形式
+    M = amplitude_to_db(S, ref=np.max)
+
+    signal = audio_augmentation(signal, sr, M)
+
+    signal = trim(signal, sr)
+
+    signal = channel_shuffle_augmentation(signal, sr)
+
+    signal = spec_augmentation(signal, sr)
+
+    signal = apply_audio_effects(signal, sr, M)
+
+    # 生成梅尔频谱图
+    M_augmented = melspectrogram(y=signal, sr=sr, power=1)
+
+    # 显示原始频谱图和增强后的频谱图
+    SDA_view(M, M_augmented, "Original", M_augmented, "Augmented")
+
+    # 保存最终的音频
+    sf.write('./output/final_audio.wav', signal, int(sr))
+
+```
+
+这段代码的目标是对输入的音频文件进行一系列的音频增强和预处理操作，并生成增强后的梅尔频谱图。以下是对代码各部分的详细解释：
+
+1. **导入所需的库和函数**：代码开始处，首先导入了一些需要的库和函数，包括音频处理库librosa，音频文件写入库soundfile，以及一些自定义的音频增强函数。
+2. **加载音频文件**：使用`librosa.load`函数加载音频文件`"./content/data/wav48/p225/p225_001.wav"`，得到音频信号`signal`和采样率`sr`。
+3. **生成梅尔频谱图**：使用`librosa.feature.melspectrogram`函数对音频信号生成梅尔频谱图。
+4. **将梅尔频谱图转换为分贝形式**：使用`librosa.amplitude_to_db`函数将梅尔频谱图的振幅转换为分贝表示，这是一种更符合人类听觉感知的表示方式。
+5. **音频增强和预处理**：然后，音频信号经过一系列的增强和预处理操作，包括：
+   - `audio_augmentation`: 进行音频增强。
+   - `trim`: 对音频进行裁剪，通常是移除开始和结束的静音部分。
+   - `channel_shuffle_augmentation`: 进行通道混洗增强，这是一种常用的数据增强技术，可以改善模型的泛化能力。
+   - `spec_augmentation`: 进行频谱增强。
+   - `apply_audio_effects`: 应用音频效果。具体的效果可能包括混响、回声等。
+6. **生成增强后的梅尔频谱图**：对经过增强和预处理的音频信号重新生成梅尔频谱图。
+7. **显示原始和增强后的梅尔频谱图**：使用`SDA_view`函数显示原始和增强后的梅尔频谱图。
+8. **保存增强后的音频**：最后，使用`soundfile.write`函数将增强后的音频信号保存为音频文件。
+
